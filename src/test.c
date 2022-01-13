@@ -136,11 +136,14 @@ void test_grayscale()
 
 void test_copy()
 {
+    image im = load_image("data/dog.jpg");
+    image c = copy_image(im);
+
     image gt = load_image("data/dog.jpg");
-    image c = copy_image(gt);
     TEST(same_image(c, gt, EPS));
     free_image(gt);
     free_image(c);
+    free_image(im);
 }
 
 void test_clamp()
