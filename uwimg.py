@@ -128,7 +128,7 @@ def save_image(im, f):
     return save_image_lib(im, f.encode('ascii'))
 
 same_image = lib.same_image
-same_image.argtypes = [IMAGE, IMAGE]
+same_image.argtypes = [IMAGE, IMAGE, c_float]
 same_image.restype = c_int
 
 nn_resize = lib.nn_resize
